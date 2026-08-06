@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial‑scale=1.0">
+<title>测试页面</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  min‑height:100vh;
+  background:linear-gradient(135deg,#222,#441466);
+  color:#fff;
+  display:flex;
+  flex‑direction:column;
+  align‑items:center;
+  justify‑content:center;
+  font‑family:system‑ui;
+}
+.box{
+  background:rgba(255,255,255,0.1);
+  backdrop‑filter:blur(10px);
+  padding:40px 60px;
+  border‑radius:16px;
+  border:1px solid rgba(255,255,255,0.2);
+  text‑align:center;
+}
+button{
+  margin‑top:20px;
+  padding:10px 24px;
+  border:none;
+  border‑radius:8px;
+  background:#7c3aed;
+  color:white;
+  font‑size:16px;
+  cursor:pointer;
+}
+</style>
+</head>
+<body>
+<div class="box">
+  <h1>HTML 测试页面</h1>
+  <p id="time"></p>
+  <button onclick="clickTest()">点我测试</button>
+</div>
+
+<script>
+function updateTime(){
+  document.getElementById('time').innerText=new Date().toLocaleString()
+}
+updateTime()
+setInterval(updateTime,1000)
+
+function clickTest(){
+  alert('点击测试成功')
+}
+</script>
+</body>
+</html>
